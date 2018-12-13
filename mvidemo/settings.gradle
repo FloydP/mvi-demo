@@ -1,1 +1,1 @@
-include ':app', ':mvilib'
+include ':app', ':mvilib', ':basiclib', ':componentservice', ':basicres', ':home'

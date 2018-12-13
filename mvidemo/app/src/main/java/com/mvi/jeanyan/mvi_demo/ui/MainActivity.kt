@@ -1,14 +1,20 @@
-package com.mvi.jeanyan.mvi_demo
+package com.mvi.jeanyan.mvi_demo.ui
 
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.jakewharton.rxbinding3.view.clicks
+import com.mvi.jeanyan.mvi_demo.R
+import com.mvi.jeanyan.mvi_demo.TestPresenter
+import com.mvi.jeanyan.mvi_demo.TestState
+import com.mvi.jeanyan.mvi_demo.TestView
 import com.mvi.jeanyan.mvilib.base.MviActivity
 import io.reactivex.Observable
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : MviActivity<TestView, TestPresenter>(), TestView {
+class MainActivity : MviActivity<TestView, TestPresenter>(),
+
+    TestView {
     override fun getWeather(): Observable<Unit> {
         return bt.clicks()
     }
